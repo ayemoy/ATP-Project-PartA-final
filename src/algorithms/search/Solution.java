@@ -22,14 +22,14 @@ public class Solution {
     public ArrayList<AState> getSolutionPath() {
         return solutionPath;
     }
-    public void setSolutionPath(ArrayList<AState> solutionPath) {
-        this.solutionPath = solutionPath;
-    }
+   // public void setSolutionPath(ArrayList<AState> solutionPath) {
+        //this.solutionPath = solutionPath;
+    //}
 
 
-    public void addStateToPathSolution(AState stateOfPath) //this function save the path of the solution
-    {
-        if(stateOfPath != null){ solutionPath.add(stateOfPath);} //add a state to the solution path
-    }
+    //public void addStateToPathSolution(AState stateOfPath) //this function save the path of the solution
+    //{
+      //  if(stateOfPath != null){ solutionPath.add(stateOfPath);} //add a state to the solution path
+   // }
 }
 
