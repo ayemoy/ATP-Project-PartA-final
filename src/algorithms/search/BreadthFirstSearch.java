@@ -16,6 +16,8 @@ public class BreadthFirstSearch extends  ASearchingAlgorithm{
 
     }
 
+
+
     @Override
     public AState searchGoalstate(ISearchable game) { //bfs run on all state in the maze and meadken sadot so we can later find the shortest path in solution function
         if(game == null){return null;} //if game empty, we cant do search on it, so return null

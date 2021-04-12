@@ -2,12 +2,12 @@ package algorithms.maze3D;
 
 import algorithms.mazeGenerators.Position;
 
+
 import java.util.Random;
 
 public abstract class AMaze3DGenerator  implements IMaze3DGenerator {
 
-    public AMaze3DGenerator() { // constructor
-    }
+    public AMaze3DGenerator() {} // constructor
 
     public abstract Maze3D generate(int depth, int row, int column);
 
@@ -20,7 +20,6 @@ public abstract class AMaze3DGenerator  implements IMaze3DGenerator {
         return totalTime;
     }
 
-
     //-_-_-_-_-_-_-_-_- help function -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
     //help function we add to choose a random position for start and end index of maze
     public Position3D RandomStartGoalRowCol(int depth , int row , int col)
@@ -30,21 +29,4 @@ public abstract class AMaze3DGenerator  implements IMaze3DGenerator {
         return chooseSomePosition;
     }
 
-
-
-    /*
-    //-_-_-_-_-_-_-_-_- help function -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-    //help function we add to choose a random position for start and end index of maze
-    public Position RandomStartGoalRowCol(int depth ,int row , int col)
-    {
-        Random random = new Random();
-        Position choosePosition = new Position(row, random.nextInt(col));// choose the start Position from the first row of the maze
-        //Position chooseDownPosition = new Position(row - 1, random.nextInt(col));// choose the end Position from the last row of the maze
-        return choosePosition;
-    }
-
-
-
-    //____________________________________________________________________________
-*/
 }

@@ -10,6 +10,11 @@ public class Maze { //all the parameters thay may be in the constructor. variabl
 
     protected int[][] intMaze; //this the 2D maze we create. every cell in the matrix build of int
 
+    /**
+     * define and print maze
+     * @param numOfRow
+     * @param numOfCol
+     */
 
     //_-_-_-_-_-_-_-_-_-constructor of new maze -_-_-_-_-_-_-_-_-_
     public Maze(int numOfRow , int numOfCol)

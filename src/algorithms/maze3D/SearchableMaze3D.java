@@ -17,7 +17,10 @@ public class SearchableMaze3D implements ISearchable {
     private int [][][] int3DMaze; //our 3D maze matrix
     private HashMap<String, Maze3DState> allStates;
 
-
+    /**
+     *
+     * @param maze3D hold a 3D maze
+     */
     public SearchableMaze3D(Maze3D maze3D)  //constructor
     {
 

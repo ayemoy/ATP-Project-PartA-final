@@ -5,7 +5,12 @@ public class EmptyMazeGenerator extends AMazeGenerator{
 
     public EmptyMazeGenerator() { }// constructor
 
-
+    /**
+     *
+     * @param numOfRow
+     * @param numOfCol
+     * @return a new maze with 0 in every cell
+     */
     @Override
 
     //create a new maze that initialize with zeros without walls, and a start ans end position

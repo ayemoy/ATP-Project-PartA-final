@@ -10,7 +10,10 @@ public class Solution {
 
     private ArrayList<AState> solutionPath; //this list save the states of the solution path
 
-
+    /**
+     *
+     * @param solutionPath return the right path of the algorithm do
+     */
 
     public Solution(ArrayList<AState> solutionPath) {
         this.solutionPath = solutionPath;

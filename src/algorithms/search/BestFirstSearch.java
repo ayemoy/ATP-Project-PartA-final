@@ -20,6 +20,7 @@ public class BestFirstSearch extends BreadthFirstSearch{
         this.notVisitedList = new PriorityQueue<AState>();
     }
 
+
     private class compareAstates implements Comparator<AState>{
         @Override
         public int compare(AState state1, AState state2) { //compare the cost betweet 2 state, and take the lowerdouble state1Cost = state1.getCost();
@@ -30,6 +31,12 @@ public class BestFirstSearch extends BreadthFirstSearch{
             else { return -1; }
         }
     }
+
+    /**
+     *
+     * @param game the searchable problem
+     * @return Astate of the goal
+     */
 
     @Override
     public AState searchGoalstate(ISearchable game) {

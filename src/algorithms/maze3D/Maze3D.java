@@ -2,6 +2,8 @@ package algorithms.maze3D;
 
 import algorithms.mazeGenerators.Position;
 
+
+
 public class Maze3D {
 
     private int numOfRow; //hold the number(size) of rows we want build the maze
@@ -13,7 +15,12 @@ public class Maze3D {
 
     protected int[][][] intMaze3D; //this the 3D maze we create. every cell in the matrix build of int
 
-
+    /**
+     *
+     * @param depth hold the size of depth of 3D maze
+     * @param numOfRow hold the size of rows of 3D maze
+     * @param numOfCol hold the size of cols of 3D maze
+     */
     public Maze3D(int depth, int numOfRow , int numOfCol) { //constructor
         intMaze3D = new int[depth][numOfRow][numOfCol];
         this.numOfRow = numOfRow;

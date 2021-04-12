@@ -9,11 +9,11 @@ import java.util.Random;
 public class MyMaze3DGenerator extends AMaze3DGenerator {
 
 
-    /**
+    /** create 3D maze
      * @param numOfDepth is the depth of the maze
      * @param numOfRow is the rows in the maze
      * @param numOfCol is the cols in the maze
-     * @return
+     * @return 3D maze type
      */
 
 

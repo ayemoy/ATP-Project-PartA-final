@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BestFirstSearchTest {
 
-    BestFirstSearch besrfsAlgo;
+    BestFirstSearch bestfsAlgo;
     private BestFirstSearch best;
     //private BreadthFirstSearch bfs;
     private Maze maze;
@@ -29,23 +29,23 @@ class BestFirstSearchTest {
 
     @Test
     void getNumberOfNodesEvaluated() {
-        besrfsAlgo=new BestFirstSearch();
-        assertEquals(0,besrfsAlgo.getNumberOfNodesEvaluated());
+        bestfsAlgo =new BestFirstSearch();
+        assertEquals(0, bestfsAlgo.getNumberOfNodesEvaluated());
     }
     @Test
     void solve3D() {
-        besrfsAlgo=new BestFirstSearch();
+        bestfsAlgo =new BestFirstSearch();
         IMaze3DGenerator lolo = new MyMaze3DGenerator();
         Maze3D maze = lolo.generate(20, 50,40);
         SearchableMaze3D searchableMaze = new SearchableMaze3D(maze);
-        assertNotNull(besrfsAlgo.solve(searchableMaze));
+        assertNotNull(bestfsAlgo.solve(searchableMaze));
 
     }
 
     @Test
     void solveNull() {
-        besrfsAlgo=new BestFirstSearch();
-        assertThrows(NullPointerException.class,()->besrfsAlgo.solve(null));
+        bestfsAlgo =new BestFirstSearch();
+        assertThrows(NullPointerException.class,()-> bestfsAlgo.solve(null));
     }
 
     @Test
@@ -53,9 +53,9 @@ class BestFirstSearchTest {
         IMazeGenerator lolo = new MyMazeGenerator();
         Maze maze = lolo.generate(1000, 1000);
         SearchableMaze searchableMaze = new SearchableMaze(maze);
-        besrfsAlgo = new BestFirstSearch();
+        bestfsAlgo = new BestFirstSearch();
         BreadthFirstSearch breadth= new BreadthFirstSearch();
-        Solution s1= besrfsAlgo.solve(searchableMaze);
+        Solution s1= bestfsAlgo.solve(searchableMaze);
         Solution s2=breadth.solve(searchableMaze);
         assertTrue(s2.getSolutionPath().size() <= s1.getSolutionPath().size());
     }
@@ -66,7 +66,7 @@ class BestFirstSearchTest {
         IMazeGenerator lolo = new MyMazeGenerator();
         Maze maze = lolo.generate(1000, 1000);
         SearchableMaze searchableMaze = new SearchableMaze(maze);
-        besrfsAlgo=new BestFirstSearch();
+        bestfsAlgo =new BestFirstSearch();
         //assertTimeout(Duration.ofMinutes(1),()->bfs.solve(searchableMaze));
     }
     @Test
@@ -74,11 +74,11 @@ class BestFirstSearchTest {
         IMazeGenerator lolo = new MyMazeGenerator();
         Maze maze = lolo.generate(1000, 1000);
         SearchableMaze searchableMaze = new SearchableMaze(maze);
-        besrfsAlgo = new BestFirstSearch();
+        bestfsAlgo = new BestFirstSearch();
         BreadthFirstSearch breadth= new BreadthFirstSearch();
-        besrfsAlgo.solve(searchableMaze);
+        bestfsAlgo.solve(searchableMaze);
         breadth.solve(searchableMaze);
-        assertTrue(besrfsAlgo.searchGoalstate(searchableMaze).getCost() <= breadth.searchGoalstate(searchableMaze).getCost());
+        assertTrue(bestfsAlgo.searchGoalstate(searchableMaze).getCost() <= breadth.searchGoalstate(searchableMaze).getCost());
     }
 
 

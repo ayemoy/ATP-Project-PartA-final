@@ -2,13 +2,16 @@ package algorithms.mazeGenerators;
 import java.util.*;
 import java.util.Random;
 
-/**
- *
- */
 import java.util.List;
 
-public class MyMazeGenerator extends AMazeGenerator {
 
+public class MyMazeGenerator extends AMazeGenerator {
+    /**
+     * in this class we did the prim algorithm
+     * @param numOfRow
+     * @param numOfCol
+     * @return a Maze type of a new maze after prim built it
+     */
 
     @Override
     public Maze generate(int numOfRow, int numOfCol) {
@@ -16,7 +19,6 @@ public class MyMazeGenerator extends AMazeGenerator {
         EmptyMazeGenerator justMaze = new EmptyMazeGenerator(); // create new maze object type empty
         Maze zeroMaze = justMaze.generate(numOfRow, numOfCol); // create zeros maze to put walls later
         int[][] emptyIntMaze = zeroMaze.getIntMaze(); //hold the array so we dont need to call it everytime (save time)
-
 
         for (int i = 0; i < numOfRow; i++) //maybe need to do a path like in simple
         {
